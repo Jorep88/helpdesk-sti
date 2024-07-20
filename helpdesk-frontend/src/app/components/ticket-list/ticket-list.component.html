@@ -1,0 +1,23 @@
+<h2>Lista de Tickets</h2>
+<a [routerLink]="['/ticket/new']">Crear nuevo ticket</a>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Estado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ticket of tickets">
+      <td>{{ ticket.id }}</td>
+      <td>{{ ticket.title }}</td>
+      <td>{{ ticket.status }}</td>
+      <td>
+        <a [routerLink]="['/ticket', ticket.id]">Ver</a>
+        <a [routerLink]="['/ticket/edit', ticket.id]">Editar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

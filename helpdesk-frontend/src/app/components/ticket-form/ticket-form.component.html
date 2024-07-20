@@ -1,0 +1,21 @@
+<h2>{{ isEditMode ? 'Editar' : 'Crear' }} Ticket</h2>
+<form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Título:</label>
+    <input id="title" type="text" formControlName="title">
+  </div>
+  <div>
+    <label for="description">Descripción:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+  <div>
+    <label for="status">Estado:</label>
+    <select id="status" formControlName="status">
+      <option value="abierto">Abierto</option>
+      <option value="en progreso">En Progreso</option>
+      <option value="cerrado">Cerrado</option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="!ticketForm.valid">{{ isEditMode ? 'Actualizar' : 'Crear' }}</button>
+  <button type="button" (click)="navigateToTickets()">Cancelar</button>
+</form>

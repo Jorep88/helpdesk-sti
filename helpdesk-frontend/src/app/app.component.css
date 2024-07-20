@@ -1,0 +1,17 @@
+header {
+    background-color: var(--color-guinda);
+    color: var(--color-blanco);
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }

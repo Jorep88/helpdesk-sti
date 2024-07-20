@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-guinda: #800000;
+    --color-blanco: #ffffff;
+  }
+  
+  body {
+    background-color: var(--color-blanco);
+    color: var(--color-guinda);
+    font-family: Arial, sans-serif;
+  }

@@ -1,0 +1,12 @@
+<div *ngIf="ticket">
+  <h2>Detalle del Ticket #{{ ticket.id }}</h2>
+  <p><strong>Título:</strong> {{ ticket.title }}</p>
+  <p><strong>Descripción:</strong> {{ ticket.description }}</p>
+  <p><strong>Estado:</strong> {{ ticket.status }}</p>
+  <p><strong>Creado:</strong> {{ ticket.created_at | date:'medium' }}</p>
+  <p><strong>Actualizado:</strong> {{ ticket.updated_at | date:'medium' }}</p>
+
+  <button [routerLink]="['/ticket/edit', ticket.id]">Editar</button>
+  <button (click)="deleteTicket()">Eliminar</button>
+  <button [routerLink]="['/tickets']">Volver a la lista</button>
+</div>
